@@ -1,0 +1,45 @@
+<html>
+    <script>
+        var carros = ["Gol", "Palio", "Uno"];
+        console.log(carros);
+
+        var primeiroCarro = carros[0];
+        var segundoCarro = carros[1];
+        var terceiroCarro = carros[2];
+
+        console.log("primeira posicao: " + primeiroCarro);
+        console.log("segunda posicao: " + segundoCarro);
+        console.log("terceira posicao: " + terceiroCarro);
+
+        carros[2] = "Argo";
+        console.log(carros[2]);
+
+        console.log("tamanho do array: " + carros.length);
+        //no caso a seguir, queremos pegar o último elemento. 
+        //Não pode usar o length pois nesse caso o número é 3, mas a posiçnao do último é 2. A proposta dinâmica a seguir é a melhor solução
+        console.log("ultimo elemento do array: " + carros[carros.length - 1])
+
+        carros[3] = "Sandero";
+        console.log("ultimo elemento do array: " + carros[carros.length - 1])
+
+        //adiciona um novo elemento na última posição
+        carros[carros.length] = "Civic";
+        console.log("ultimo elemento do array: " + carros[carros.length - 1])
+
+        //outra forma de adicionar um novo elemento na última posição
+        carros.push("Polo");
+        console.log(carros);
+
+        //remove o último elemento, no caso, o Polo
+        console.log(carros.pop());
+        console.log(carros);
+        
+        //insere elementos no início da lista
+        carros.unshift("Jetta");
+        console.log(carros);
+
+        //remove o primeiro elemento, no caso, Jetta. Pode usar também console.log(carros.shift()); caso queira receber esse elemento
+        carros.shift();
+        console.log(carros);
+    </script>
+</html>
